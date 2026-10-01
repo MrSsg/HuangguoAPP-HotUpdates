@@ -17,7 +17,7 @@ python publish.py --web
 python publish.py --web --publish
 ```
 
-普通规则或主题包不必包含界面。完整界面包从相邻 Android Version/app/src/main/assets 构建，也可以用 --assets 指定路径。资源包启用时整套替换；缺省界面使用 APK 内置版本。只发主题包会回到内置界面，因此需要保留已发布的自定义界面时继续使用 --web。
+普通规则或主题包不必包含界面。完整界面包从相邻 Android Version/app/src/main/assets 构建，也可以用 --assets 指定路径。资源包启用时整套替换；缺省界面使用 APK 内置版本。只发主题或规则包会保留客户端最后验证成功的界面，无需重复下载整套界面。release.json 的 resetUi=true 可明确恢复 APK 内置界面。
 
 每次发布先递增 release.json 中的 revision。已有 revision 不可覆盖。回退内容也必须用更大的 revision 重新发布，避免客户端重复启用已失败的包。正式 APK 可以独立升级；bridgeVersion=1 的兼容包可继续使用。
 
