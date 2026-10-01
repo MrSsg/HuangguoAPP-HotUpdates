@@ -1,7 +1,7 @@
 {
-  "revision": 3,
-  "version": "2026.10.01.3",
+  "revision": 4,
+  "version": "2026.10.01.4",
   "minVersionCode": 35,
   "bridgeVersion": 1,
-  "notes": "资源下载完成后在首页空闲时自动启用；返回页面卡片新增轻柔边缘阴影，保留国庆 Banner。"
+  "notes": "加深返回卡片阴影；将阴影圆角固定缓存，消除返回时额外逐帧重绘，保留自动热更新与国庆 Banner。"
 }
