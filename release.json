@@ -1,0 +1,7 @@
+{
+  "revision": 1,
+  "version": "2026.10.01.1",
+  "minVersionCode": 35,
+  "bridgeVersion": 1,
+  "notes": "热更新基础规则与默认主题"
+}

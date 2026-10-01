@@ -1,0 +1,139 @@
+{
+  "origin": "https://huangguoai.com",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Linux; Android) AppleWebKit/537.36 Chrome/130 Mobile Safari/537.36",
+    "Referer": "{origin}/"
+  },
+  "routes": {
+    "home": "/",
+    "recommend": "/recommend",
+    "recommendPage": "/recommend/{page}/",
+    "newest": "/newest",
+    "newestPage": "/newest/{page}/",
+    "category": "/{category}/",
+    "categoryPage": "/{category}/{page}/",
+    "tag": "/tag/{slug}/",
+    "tagPage": "/tag/{slug}/page/{page}/",
+    "detail": "/video/{id}/",
+    "episodeFirst": "/video/{id}/",
+    "episode": "/video/{id}/ep-{episode}/",
+    "search": "/search/?keyword={query}",
+    "tagSitemap": "/sitemap/tag/1.xml"
+  },
+  "patterns": {
+    "heroId": "^/video/(\\d+)/",
+    "episode": "^/video/{id}/(?:ep-(\\d+)/)?$",
+    "tag": "^/tag/([a-z0-9-]+)/$",
+    "page": "/(\\d+)/$"
+  },
+  "selectors": {
+    "cover": ".hg-drama-card__cover img",
+    "cards": ".hg-drama-card[data-track-id]",
+    "title": ".hg-drama-card__title",
+    "removeTitle": ".sr-only",
+    "description": ".hg-drama-card__desc",
+    "score": ".hg-drama-card__score",
+    "episodeLabel": ".hg-drama-card__episode",
+    "tags": ".hg-drama-card__tags .hg-tag",
+    "removeTag": ".sr-only",
+    "pager": ".hg-pager a[href]",
+    "hero": "[data-hero-slides]",
+    "sections": "main section.hg-section",
+    "sectionTitle": "h2",
+    "tagTitle": "h1",
+    "content": "#videoInitialData",
+    "detailScore": ".hg-play__scorenum, .hg-web-play__scorenum",
+    "episodeLinks": "a[href]",
+    "next": ".hg-web-play [data-web-play-ep-next][href]"
+  },
+  "attributes": {
+    "id": "data-track-id",
+    "title": "data-track-title",
+    "type": "data-track-type-id",
+    "cover": "data-src",
+    "coverFallback": "src"
+  },
+  "categories": [
+    "ai-duanju",
+    "ai-manju",
+    "ai-huanlian",
+    "ai-mogai"
+  ],
+  "categoryMap": {
+    "24": "ai-duanju",
+    "25": "ai-manju",
+    "26": "ai-huanlian",
+    "27": "ai-mogai"
+  },
+  "sectionNames": {
+    "recommend": "精选推荐",
+    "newest": "最近上新"
+  },
+  "fields": {
+    "content": {
+      "id": [
+        "id"
+      ],
+      "title": [
+        "title"
+      ],
+      "description": [
+        "description"
+      ],
+      "videoSrc": [
+        "videoSrc"
+      ],
+      "tags": [
+        "tags"
+      ],
+      "coverSrc": [
+        "coverSrc"
+      ],
+      "posterSrc": [
+        "posterSrc"
+      ]
+    },
+    "hero": {
+      "href": [
+        "href"
+      ],
+      "title": [
+        "title"
+      ],
+      "cover": [
+        "cover"
+      ],
+      "desc": [
+        "desc"
+      ],
+      "score": [
+        "score"
+      ],
+      "episode": [
+        "episode"
+      ],
+      "isAd": [
+        "isAd"
+      ],
+      "adId": [
+        "adId"
+      ]
+    }
+  },
+  "cover": {
+    "allowedHosts": [
+      "pic.fisawck.cn",
+      "pic.tkzdds.cn",
+      "pic.wirqed.cn"
+    ],
+    "hostRewrites": {},
+    "mode": "aes-cbc",
+    "transformation": "AES/CBC/NoPadding",
+    "key": "f5d965df75336270",
+    "iv": "97b60374abc2fbe1",
+    "keyEncoding": "text",
+    "checkExtension": true,
+    "headerRepair": "legacy-xor",
+    "bytePatches": []
+  }
+}

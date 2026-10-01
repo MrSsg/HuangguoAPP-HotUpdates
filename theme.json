@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "name": "默认主题",
+  "startsAt": null,
+  "endsAt": null,
+  "light": {},
+  "dark": {},
+  "background": {},
+  "dock": {}
+}
