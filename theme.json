@@ -6,5 +6,18 @@
   "light": {},
   "dark": {},
   "background": {},
-  "dock": {}
+  "dock": {},
+  "campaigns": [
+    {
+      "id": "national-day-2026",
+      "title": "欢度国庆",
+      "description": "山河锦绣，家国同庆。\n祝你国庆快乐。",
+      "artwork": "theme/national-day.svg",
+      "startsAt": "2026-10-01T00:00:00+08:00",
+      "endsAt": "2026-10-08T00:00:00+08:00",
+      "dateLabel": "2026 · 10.01",
+      "button": "共庆好时光",
+      "message": "愿这一份节日的喜悦，陪你度过轻松自在的假期。祝愿祖国繁荣昌盛，愿你与家人平安喜乐。"
+    }
+  ]
 }

@@ -36,3 +36,9 @@ light/dark 接受 --bg、--panel、--text、--muted、--accent、--dock、--line
 cover.mode 支持 aes-cbc、plain、auto；AES/CBC/NoPadding 和 AES/CBC/PKCS5Padding，密钥编码支持 text/hex/base64。hostRewrites 可将历史封面域名映射到新的 allowedHosts。headerRepair=legacy-xor 保留旧修复规则，none 关闭；bytePatches 可以按 offset/from/to 条件替换字节。全新解密算法或新的原生功能仍需要 APK。
 
 routes 定义路径模板，patterns 定义链接匹配规则。fields.content/hero 的值为字段别名数组，支持点分隔嵌套字段（例如 stream.url）。规则改变后仅清理目录缓存，收藏和观看进度保留。
+
+## 首页庆祝 Banner
+
+theme.json 中的 campaigns 数组可添加本地宣传页，独立于全局主题 enabled 开关。每项包含 id、title、description、artwork（theme/ 下的英文资源路径）、startsAt/endsAt（带时区）、dateLabel、button、message。活动在有效期内加入首页轮播首位，点击打开庆祝页，系统返回或页面返回恢复首页。活动到期后自动退出轮播。修改或移除活动配置后发布更大的 revision 即可，无需修改 APK。
+
+首次支持此入口的前端资源版本为 2026.10.01.2。后续只改活动配置可以单独发布规则/主题包，客户端继续沿用已有前端。
