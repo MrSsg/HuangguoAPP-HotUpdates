@@ -1,7 +1,7 @@
 {
-  "revision": 2,
-  "version": "2026.10.01.2",
+  "revision": 3,
+  "version": "2026.10.01.3",
   "minVersionCode": 35,
   "bridgeVersion": 1,
-  "notes": "首页新增国庆庆祝 Banner 与宣传页，保留原有剧集轮播；通过资源热更新启用，无需安装 APK。"
+  "notes": "资源下载完成后在首页空闲时自动启用；返回页面卡片新增轻柔边缘阴影，保留国庆 Banner。"
 }
