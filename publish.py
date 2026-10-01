@@ -45,8 +45,10 @@ def build(args):
     if args.key is None or not args.key.is_file():
         raise FileNotFoundError("缺少本机热更新签名私钥；请通过 --key 指定，勿提交私钥")
     key = serialization.load_pem_private_key(args.key.read_bytes(), password=None)
-    public = key.public_key().public_bytes(serialization.Encoding.PEM, serialization.PublicFormat.SubjectPublicKeyInfo)
-    if public != (ROOT / "public-key.pem").read_bytes():
+    public = key.public_key().public_bytes(serialization.Encoding.DER, serialization.PublicFormat.SubjectPublicKeyInfo)
+    expected = serialization.load_pem_public_key((ROOT / "public-key.pem").read_bytes()).public_bytes(
+        serialization.Encoding.DER, serialization.PublicFormat.SubjectPublicKeyInfo)
+    if public != expected:
         raise ValueError("私钥与应用信任的公钥不匹配")
     tag = "resources-r" + str(revision)
     dist = ROOT / "dist" / tag
